@@ -24,3 +24,51 @@ listaBocadillos.sort((a,b)=>{
     if(a>b) return 1;
     else return -1;
 } )
+
+listaBocadillos.forEach((bocadillo)=>{
+    console.log(bocadillo);
+})
+
+//arrays de objetos
+var listaCafeteria=[
+    {id:1, nombre:"Atun con tomate", precio:3.50},
+    {id:2, nombre:"Mixto", precio:4.50},
+    {id:3, nombre:"Vegetal", precio:3},
+    {id:4, nombre:"Jamon", precio:5},
+    {id:5, nombre:"Pollo", precio:1.50}
+]
+
+onload=()=>{
+    rellenarSelectBocadillos(listaCafeteria);
+    document.getElementById("selectBocadillos")
+            .addEventListener("change", mostrarPrecioBocadillo);
+
+    document.getElementById("botonCaro")
+            .addEventListener("click", bocadilloMasCaro);
+                       
+    }
+
+function rellenarSelectBocadillos(lista) {
+    let selectBocadillos=document.getElementById("selectBocadillos");
+    lista.forEach((bocadillo)=>{
+        selectBocadillos.insertAdjacentHTML("beforeend", `<option>${bocadillo.nombre}</option>` )
+    }
+)};
+
+function mostrarPrecioBocadillo() {
+    //localizar el select
+    let nombreBocadilloSeleccionado=document.getElementById("selectBocadillos").value;
+
+    //buscar en la lista de bocadillos con ese nombre
+    let bocadilloSeleccionado=listaCafeteria.find((bocadillo)=>bocadillo.nombre==nombreBocadilloSeleccionado);
+    //mostrar el precio de ese bocadillo en e input
+    if(bocadilloSeleccionado){
+        document.getElementById("precioBocadillo").value=bocadilloSeleccionado.precio;
+    }
+    
+}
+
+function bocadilloMasCaro() {
+    let masCaro = [...listaCafeteria].sort((a, b) => b.precio - a.precio)[0];
+    alert(`El bocadillo mas caro es: ${masCaro.nombre}`);
+}
