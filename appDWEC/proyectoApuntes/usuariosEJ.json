@@ -1,0 +1,102 @@
+[
+  {
+    "codigo": "ADM001",
+    "clave": "Admin1234!",
+    "tipo": "admin"
+  },
+  {
+    "codigo": "ADM002",
+    "clave": "SuperSys99$",
+    "tipo": "admin"
+  },
+  {
+    "codigo": "PRO001",
+    "clave": "Profesor2026",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "PRO002",
+    "clave": "MateFisica88",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "PRO003",
+    "clave": "Historia992",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "PRO004",
+    "clave": "LenguaLiteratura",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "PRO005",
+    "clave": "BiologiaCelular",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "PRO006",
+    "clave": "QuimicaOrganica",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": "ALU001",
+    "clave": "alumno_pass01",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU002",
+    "clave": "alumno_pass02",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU003",
+    "clave": "alumno_pass03",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU004",
+    "clave": "alumno_pass04",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU005",
+    "clave": "alumno_pass05",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU006",
+    "clave": "alumno_pass06",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU007",
+    "clave": "alumno_pass07",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU008",
+    "clave": "alumno_pass08",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU009",
+    "clave": "alumno_pass09",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU010",
+    "clave": "alumno_pass10",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU011",
+    "clave": "alumno_pass11",
+    "tipo": "alumno"
+  },
+  {
+    "codigo": "ALU012",
+    "clave": "alumno_pass12",
+    "tipo": "alumno"
+  }
+]

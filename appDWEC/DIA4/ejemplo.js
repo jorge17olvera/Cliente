@@ -31,11 +31,11 @@ listaBocadillos.forEach((bocadillo)=>{
 
 //arrays de objetos
 var listaCafeteria=[
-    {id:1, nombre:"Atun con tomate", precio:3.50},
-    {id:2, nombre:"Mixto", precio:4.50},
-    {id:3, nombre:"Vegetal", precio:3},
-    {id:4, nombre:"Jamon", precio:5},
-    {id:5, nombre:"Pollo", precio:1.50}
+    {id:1,foto:"atunConTomate.jpg", nombre:"Atun con tomate", precio:3.50},
+    {id:2,foto:"mixto.jpg", nombre:"Mixto", precio:4.50},
+    {id:3,foto:"vegetal.jpg", nombre:"Vegetal", precio:3},
+    {id:4, foto:"jamon.jpg", nombre:"Jamon", precio:5},
+    {id:5, foto:"pollo.jpg" ,nombre:"Pollo", precio:1.50}
 ]
 
 onload=()=>{
@@ -45,7 +45,37 @@ onload=()=>{
 
     document.getElementById("botonCaro")
             .addEventListener("click", bocadilloMasCaro);
+
+    mostrarBocadillosEnTabla(listaCafeteria);
                        
+    }
+
+    function mostrarBocadillosEnTabla(lista) {
+        let tabla=document.createElement("table");
+        document.body.appendChild(tabla);
+        let thead=document.createElement("thead");
+        let tbody=document.createElement("tbody");
+        tabla.appendChild(thead);
+        tabla.appendChild(tbody);
+
+        let th=document.createElement("th");
+        thead.insertAdjacentHTML("beforeend", `<th>nombre</th><th>foto</th><th>precio</th>`);
+
+
+        lista.forEach((bocadillo)=>{
+            let tr=document.createElement("tr");
+        tbody.appendChild(tr);
+
+        let td=document.createElement("td");
+        tr.appendChild(td);
+        //td.appendChild(document.createTextNode(lista[0].nombre));
+        td.insertAdjacentText("beforeend", bocadillo.nombre);
+
+        let tdFoto=document.createElement("td");
+        tr.appendChild(tdFoto);
+        tdFoto.insertAdjacentElement("beforeend",bocadillo.foto);
+        });
+        
     }
 
 function rellenarSelectBocadillos(lista) {
