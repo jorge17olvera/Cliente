@@ -5,12 +5,15 @@ const Operaciones={
     DIVIDIR:"dividir"
 }
 
+const MESESYEAR=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
 onload=()=>{
     document.getElementsByTagName("input")[2].addEventListener("click", ()=>comprobarOperadoresYOperar(Operaciones.SUMAR));
     document.getElementsByTagName("input")[3].addEventListener("click", ()=>comprobarOperadoresYOperar(Operaciones.RESTAR));
     document.getElementsByTagName("input")[4].addEventListener("click", ()=>comprobarOperadoresYOperar(Operaciones.MULTIPLICAR));
     document.getElementsByTagName("input")[5].addEventListener("click", ()=>comprobarOperadoresYOperar(Operaciones.DIVIDIR));
     document.getElementById("botonMostrarMes").addEventListener("click", MostrarMesNacimiento);
+    document.getElementById("botonMayorEdad").addEventListener("click", MayorEdad);
 }
 
 function comprobarOperadoresYOperar(tipoOperacion) {
@@ -49,13 +52,51 @@ function comprobarOperadoresYOperar(tipoOperacion) {
     }
 }
 
+function esFechaValida(fechaEnTexto) {
+    if (fechaEnTexto=="" || !/^\d{2}\/\d{2}\/\d{4}$/.test(fechaEnTexto)) {
+        return false;
+    }else{//Formato valido
+        let year=fechaEnTexto.split("/")[2];
+        let mes=fechaEnTexto.split("/")[1];
+        let dia=fechaEnTexto.split("/")[0];
+        
+        let fecha=new Date(year, mes-1,dia);
+        
+        if (dia!=fecha.getDate() || mes!=fecha.getMonth()+1 || year!=fecha.getFullYear()) {//fecha invalida
+            return false;
+        }else{
+            return true;
+        }
+    }
+}
+
 function MostrarMesNacimiento() {
     let fechaTexto=document.getElementById("fechaNacimiento").value.trim();
-    if (fechaTexto=="" || /^\d{2}\/\d{2}\/\d{4}$/.test(fechaTexto)) {
-        alert("Fecha de nacimiento vacia")
-    }else{//Fecha valida
-        
+    if (!esFechaValida(fechaTexto)) {
+        alert("Fecha no es valida")
+    } else {
+        alert(`El mes de nacimiento es ${MESESYEAR[fechaTexto.split("/")[1]-1]}`);
     }
-    
 
 }
+
+function MayorEdad() {
+    let fechaTexto=document.getElementById("fechaNacimiento").value.trim();
+    if (!esFechaValida(fechaTexto)) {
+        alert(("Fecha ivalida"))
+    } else {
+        let fecha=new Date(fechaTexto.split("/")[2], fechaTexto.split("/")[1]-1, fechaTexto.split("/")[0]);
+        let fechaActual=new Date();
+    
+        fechaActual.setFullYear(fechaActual.getFullYear()-18)
+    
+        if (fechaActual>fecha) {
+            alert("Eres mayor de edad");
+        } else {
+            alert("Eres menor de edad");
+        }
+        
+    }
+
+}
+ 
