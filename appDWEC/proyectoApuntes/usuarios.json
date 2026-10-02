@@ -1,0 +1,103 @@
+[
+  {
+    "codigo": 1,
+    "clave": "a8f3c1e7b2d94f6a0c5e8b1d3f7a9c2e6b4d8f1a5c7e9b3d6f0a2c8e4b1d7f",
+    "tipo": "admin"
+  },
+  {
+    "codigo": 2,
+    "clave": "b7e2d9f4a1c6e8b3d5f0a7c2e9b4d1f6a8c3e5b7d0f2a9c4e6b1d8f3a5c7e2",
+    "tipo": "admin"
+  },
+  {
+    "codigo": 3,
+    "clave": "c4a9e2b7d1f6c8a3e5b0d9f4a7c2e6b8d3f1a5c9e4b7d2f6a0c8e3b5d1f9a6",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": 4,
+    "clave": "d1f7a3c9e5b2d8f4a6c0e1b7d3f9a5c2e8b4d6f0a1c7e3b9d5f2a8c4e6b7d0",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": 5,
+    "clave": "e6b3d8f1a5c9e2b7d4f0a6c3e8b1d5f7a9c2e4b6d0f3a8c1e7b5d9f2a4c6e8",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": 6,
+    "clave": "f2c8e4b1d7a5f9c3e6b0d2a8f4c1e7b9d5a3c6e2f8b4d0a1c9e5b7d3f6a2c8",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": 7,
+    "clave": "a5d1f8c3e7b9a2d6f4c0e5b8d1a7f3c9e6b2d4f0a8c5e1b7d9f3a6c2e4b8d5",
+    "tipo": "profesor"
+  },
+  {
+    "codigo": 8,
+    "clave": "b3f9c6e2a8d4b1f7c5e0a9d3b6f2c8e4a1d7f5b9c3e6a2d8f0b4c7e5a1d9f6",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 9,
+    "clave": "c8e2a5d9f1b7c4e6a3d0f8b2c5e9a1d7f4b6c3e8a0d2f5b9c1e7a4d6f3b8c5",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 10,
+    "clave": "d5b1f7a9c3e6d2f8b4a0c5e1f9d7b3a6c8e2f4b1d5a9c7e3b0f6a2d8c4e5b7",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 11,
+    "clave": "e9c4a2f6b8d1e5c3a7f0b4d9e2c6a1f8b3d5e7c0a4f2b6d8e1c9a5f3b7d4e6",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 12,
+    "clave": "f6a3d8b1e5c7f2a9d4b0e6c3f8a1d5b7e9c2a4f6d0b3e8c5a7d1f4b9e2c6a8",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 13,
+    "clave": "a2e7c4b9f5d1a8c3e6b0f2d7a4c9e1b5f8d3a6c2e7b0f4d9a1c5e8b3d6f2a7",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 14,
+    "clave": "b8d3f1a6c9e4b2d7f5a0c8e3b1d6f9a4c2e7b5d8f0a3c6e1b9d4f2a7c5e8b6",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 15,
+    "clave": "c1f5a9e3b7d2c8f4a6e0b1d9f5c3a7e8b2d4f6c1a9e5b3d7f0c8a2e4b6d9f1",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 16,
+    "clave": "d7a4c2e8b5f1d9a6c3e0b7f4a2d8c5e1b9f6a3d7c4e0b8f2a5d1c9e6b3f7a4",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 17,
+    "clave": "e4b9d6f2a1c7e5b3d8f0a6c4e2b9d1f7a5c3e8b6d4f0a2c9e5b1d7f3a8c6e4",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 18,
+    "clave": "f9c3e7a2d5b1f8c6e4a0d9b3f7c2e5a8d1b6c4f9e3a7d0b2c8f5a1e6b4d9c7",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 19,
+    "clave": "a6e1b8d4f7c2a9e5b3d0f6c8a1e4b7d9f2c5a3e6b8d1f0c4a7e9b2d5f3c6a8",
+    "tipo": "estudiante"
+  },
+  {
+    "codigo": 20,
+    "clave": "b4f8d2a7c1e6b9d3f5a0c4e8b2d7f1a6c9e3b5d8f4a2c7e0b1d6f9a3c5e8b4",
+    "tipo": "estudiante"
+  }
+]
+

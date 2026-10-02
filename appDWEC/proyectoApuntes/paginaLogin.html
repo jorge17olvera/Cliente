@@ -5,122 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Plataforma Educativa</title>
     <style>
-        :root {
-            --primary-color: #4f46e5;
-            --primary-hover: #4338ca;
-            --bg-color: #f3f4f6;
-            --text-color: #1f2937;
-            --border-color: #d1d5db;
-        }
+    :root {
+        --primary-color: #4f46e5;
+        --primary-hover: #4338ca;
+        --bg-color: #f3f4f6;
+        --text-color: #1f2937;
+        --border-color: #d1d5db;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: var(--text-color);
-        }
+    body {
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: var(--text-color);
+    }
 
-        .login-container {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            width: 100%;
-            max-width: 400px;
-        }
+    .login-container {
+        background-color: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 400px;
+    }
 
-        .login-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
-        .login-header h1 {
-            font-size: 1.5rem;
-            color: #111827;
-            margin-bottom: 0.5rem;
-        }
+    .login-header h1 {
+        font-size: 1.5rem;
+        color: #111827;
+        margin-bottom: 0.5rem;
+    }
 
-        .login-header p {
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
+    .login-header p {
+        color: #6b7280;
+        font-size: 0.875rem;
+    }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+    /* Adaptado a tus nuevas clases divCodigo y divClave */
+    .divCodigo, .divClave {
+        margin-bottom: 1.5rem;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: #374151;
-        }
+    .divCodigo label, .divClave label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #374151;
+    }
 
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
+    .divCodigo input, .divClave input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
 
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
-        }
+    .divCodigo input:focus, .divClave input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    }
 
-        .btn-submit {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+    /* Estilos para el mensaje de error específico que has creado */
+    #error {
+        background-color: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #f87171;
+        padding: 0.75rem;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem; /* Para separarlo del botón */
+    }
 
-        .btn-submit:hover {
-            background-color: var(--primary-hover);
-        }
+    /* Clase para ocultar elementos. ¡Muy útil en JavaScript! */
+    .oculto {
+        display: none !important;
+    }
 
-        .message {
-            margin-top: 1rem;
-            padding: 0.75rem;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 0.875rem;
-            display: none;
-        }
+    /* Adaptado al ID de tu nuevo botón */
+    #botonEnviar {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
 
-        .message.error {
-            display: block;
-            background-color: #fee2e2;
-            color: #991b1b;
-            border: 1px solid #f87171;
-        }
-
-        .message.success {
-            display: block;
-            background-color: #d1fae5;
-            color: #065f46;
-            border: 1px solid #34d399;
-        }
-    </style>
+    #botonEnviar:hover {
+        background-color: var(--primary-hover);
+    }
+</style>
+    <script src="paginaLogin.js"></script>
 </head>
 <body>
 
@@ -130,65 +127,23 @@
             <p>Ingresa tu código y clave para acceder</p>
         </div>
 
-        <form id="loginForm">
-            <div class="form-group">
+        <form id="formularioInicioSesion">
+            <div class="divCodigo">
                 <label for="codigo">Código de Usuario</label>
-                <input type="text" id="codigo" name="codigo" placeholder="Ej: ADM001, PRO001, ALU001" required autocomplete="username">
+                <input type="text" id="codigo" name="codigo" placeholder="usuario" required>
             </div>
 
-            <div class="form-group">
+            <div class="divClave">
                 <label for="clave">Clave</label>
-                <input type="password" id="clave" name="clave" placeholder="••••••••" required autocomplete="current-password">
+                <input type="password" id="clave" name="clave" placeholder="••••••••" required>
             </div>
 
-            <button type="submit" class="btn-submit">Iniciar Sesión</button>
+            <div id="error" class="oculto">El usuario/contraseña incorrecta</div>
+
+            <button type="button" id="botonEnviar">Iniciar Sesión</button>
         </form>
 
-        <div id="statusMessage" class="message"></div>
+        
     </div>
-
-    <script>
-        // Simulamos la base de datos cargando el JSON directamente aquí
-        const baseDeDatos = [
-            {"codigo": "ADM001", "clave": "Admin1234!", "tipo": "admin"},
-            {"codigo": "ADM002", "clave": "SuperSys99$", "tipo": "admin"},
-            {"codigo": "PRO001", "clave": "Profesor2026", "tipo": "profesor"},
-            {"codigo": "PRO002", "clave": "MateFisica88", "tipo": "profesor"},
-            {"codigo": "ALU001", "clave": "alumno_pass01", "tipo": "alumno"},
-            {"codigo": "ALU002", "clave": "alumno_pass02", "tipo": "alumno"}
-            // He incluido una muestra de los usuarios para la demostración
-        ];
-
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evitamos que la página se recargue
-
-            const codigoInput = document.getElementById('codigo').value.trim().toUpperCase();
-            const claveInput = document.getElementById('clave').value;
-            const messageEl = document.getElementById('statusMessage');
-
-            // Buscamos el usuario en nuestro "JSON"
-            const usuarioEncontrado = baseDeDatos.find(user => user.codigo === codigoInput);
-
-            if (!usuarioEncontrado) {
-                mostrarMensaje('Usuario no encontrado', 'error');
-            } else if (usuarioEncontrado.clave !== claveInput) {
-                mostrarMensaje('Clave incorrecta', 'error');
-            } else {
-                // Login exitoso
-                let rol = '';
-                if(usuarioEncontrado.tipo === 'admin') rol = 'Administrador';
-                if(usuarioEncontrado.tipo === 'profesor') rol = 'Profesor';
-                if(usuarioEncontrado.tipo === 'alumno') rol = 'Alumno';
-                
-                mostrarMensaje(`¡Bienvenido! Has iniciado sesión como ${rol}.`, 'success');
-            }
-        });
-
-        function mostrarMensaje(texto, tipo) {
-            const messageEl = document.getElementById('statusMessage');
-            messageEl.textContent = texto;
-            messageEl.className = 'message ' + tipo;
-        }
-    </script>
 </body>
 </html>
