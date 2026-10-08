@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Caramelos</title>
+    <script>
+        let listaCaramelos = [
+            {id: 1, nombre: "Piruleta1", foto: "piruleta1.jpg", precio: 12},
+            {id: 2, nombre: "Piruleta2", foto: "piruleta2.jpg", precio: 2},
+            {id: 3, nombre: "Piruleta3", foto: "piruleta3.jpg", precio: 7},
+            {id: 4, nombre: "Piruleta4", foto: "piruleta4.jpg", precio: 4},
+            {id: 5, nombre: "Piruleta5", foto: "piruleta5.jpg", precio: 10},
+        ];
+
+        onload = () => {
+            // Inicializar la cookie del carrito si no existe
+            if (!recuperarCookie("carrito")) {
+                document.cookie = "carrito=; path=/";
+            }
+            rellenarTabla(listaCaramelos);
+            actualizarContadorVisual();
+        }
+
+        function rellenarTabla(lista) {
+            let tbody = document.querySelector("#tablaCaramelos tbody");
+            tbody.innerHTML = ""; // Limpiar por si acaso
+            lista.forEach(caramelo => {
+                let contenidoHTML = `
+                <tr>
+                    <td><img src="${caramelo.foto}" class="fotoTabla" width="50"></td>
+                    <td>${caramelo.nombre}</td>
+                    <td>${caramelo.precio}€</td>
+                    <td><button type="button" onclick="comprar(${caramelo.id})">Comprar</button></td>
+                </tr>`;
+                tbody.insertAdjacentHTML("beforeend", contenidoHTML);
+            });
+        }
+
+        function recuperarCookie(nombreCookiePedida) {
+            let listaCookies = document.cookie.split(";");
+            for (let cookie of listaCookies) {
+                let [nombre, valor] = cookie.split("=").map(c => c.trim());
+                if (nombre === nombreCookiePedida) {
+                    return decodeURIComponent(valor);
+                }
+            }
+            return "";
+        }
+
+        function comprar(idCaramelo) {
+            // Recuperar carrito actual (guardaremos los IDs separados por comas)
+            let contenidoCookie=recuperarCookie("carrito");
+            let listaCarrito=[];
+            if (contenidoCookie!="") {
+                listaCarrito = JSON.parse(contenidoCookie);
+            }
+
+            listaCarrito.push({idCaramelo:idCaramelo})
+            document.cookie=`carrito=${JSON.stringify(listaCarrito)}`;
+
+            document.getElementById("contadorCarrito").innerText=listaCarrito.length;
+            
+            // Añadir el nuevo caramelo
+            arrayCarrito.push(idCaramelo);
+            
+            // Guardar de nuevo en la cookie
+            document.cookie = `carrito=${arrayCarrito.join(",")}; path=/`;
+            
+            alert("Caramelo comprado y añadido al carrito");
+            actualizarContadorVisual();
+        }
+
+        
+    </script>
+    <style>
+        table, tr, td, th {
+            border: 1px solid red;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Carrito <span id="contadorCarrito">0</span>
+    </div>
+    <table id="tablaCaramelos">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los elementos se rellenarán mediante JavaScript -->
+        </tbody>
+    </table>
+</body>
+</html>

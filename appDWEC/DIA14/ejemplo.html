@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.cookie="idioma=es-ES";
+        console.log(document.cookie);
+
+        document.cookie="pais=España";
+        console.log(document.cookie);
+        let listaCookies=document.cookie.split(";");
+        listaCookies.forEach(cookie=>{
+            let nombreCookie=cookie.split("=")[0].trim();
+            let valorCookie=cookie.split("=")[1].trim();
+            if (nombreCookie=="pais") {
+                alert(valorCookie);
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
