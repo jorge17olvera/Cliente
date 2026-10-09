@@ -1,0 +1,123 @@
+[
+    {
+      "idClase": 1,
+      "idProfesor": 1,
+      "idEstudiante": 1,
+      "fecha": "2025-09-08"
+    },
+    {
+      "idClase": 2,
+      "idProfesor": 2,
+      "idEstudiante": 2,
+      "fecha": "2025-09-09"
+    },
+    {
+      "idClase": 3,
+      "idProfesor": 3,
+      "idEstudiante": 3,
+      "fecha": "2025-09-10"
+    },
+    {
+      "idClase": 4,
+      "idProfesor": 4,
+      "idEstudiante": 4,
+      "fecha": "2025-09-11"
+    },
+    {
+      "idClase": 5,
+      "idProfesor": 5,
+      "idEstudiante": 5,
+      "fecha": "2025-09-12"
+    },
+    {
+      "idClase": 6,
+      "idProfesor": 6,
+      "idEstudiante": 6,
+      "fecha": "2025-09-15"
+    },
+    {
+      "idClase": 7,
+      "idProfesor": 7,
+      "idEstudiante": 7,
+      "fecha": "2025-09-16"
+    },
+    {
+      "idClase": 8,
+      "idProfesor": 8,
+      "idEstudiante": 8,
+      "fecha": "2025-09-17"
+    },
+    {
+      "idClase": 9,
+      "idProfesor": 1,
+      "idEstudiante": 9,
+      "fecha": "2025-09-18"
+    },
+    {
+      "idClase": 10,
+      "idProfesor": 2,
+      "idEstudiante": 10,
+      "fecha": "2025-09-19"
+    },
+    {
+      "idClase": 11,
+      "idProfesor": 3,
+      "idEstudiante": 11,
+      "fecha": "2025-09-22"
+    },
+    {
+      "idClase": 12,
+      "idProfesor": 4,
+      "idEstudiante": 12,
+      "fecha": "2025-09-23"
+    },
+    {
+      "idClase": 13,
+      "idProfesor": 5,
+      "idEstudiante": 13,
+      "fecha": "2025-09-24"
+    },
+    {
+      "idClase": 14,
+      "idProfesor": 6,
+      "idEstudiante": 14,
+      "fecha": "2025-09-25"
+    },
+    {
+      "idClase": 15,
+      "idProfesor": 7,
+      "idEstudiante": 15,
+      "fecha": "2025-09-26"
+    },
+    {
+      "idClase": 16,
+      "idProfesor": 8,
+      "idEstudiante": 16,
+      "fecha": "2025-09-29"
+    },
+    {
+      "idClase": 17,
+      "idProfesor": 1,
+      "idEstudiante": 17,
+      "fecha": "2025-09-30"
+    },
+    {
+      "idClase": 18,
+      "idProfesor": 3,
+      "idEstudiante": 18,
+      "fecha": "2025-10-01"
+    },
+    {
+      "idClase": 19,
+      "idProfesor": 5,
+      "idEstudiante": 19,
+      "fecha": "2025-10-02"
+    },
+    {
+      "idClase": 20,
+      "idProfesor": 8,
+      "idEstudiante": 20,
+      "fecha": "2025-10-03"
+    }
+  ]
+

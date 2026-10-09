@@ -1,7 +1,5 @@
-var listaUsuarios=[];//variable que almacenara todos los usuarios existentes
-fetch("usuarios.json")
-.then(respuesta=>respuesta.json())
-.then(datosJSON=>listaUsuarios=datosJSON);
+let listaUsuarios=[];//variable que almacenara todos los usuarios existentes
+pedirDatosJSONAlServidor(listaUsuarios, "appDWEC/proyectoApuntes/json/usuarios.json");
 
 onload=()=>{
     document.getElementById("botonEnviar").addEventListener("click", validarAcceso);

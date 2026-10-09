@@ -39,13 +39,14 @@
 
         function recuperarCookie(nombreCookiePedida) {
             let listaCookies = document.cookie.split(";");
+            let retorno="";
             for (let cookie of listaCookies) {
                 let [nombre, valor] = cookie.split("=").map(c => c.trim());
                 if (nombre === nombreCookiePedida) {
-                    return decodeURIComponent(valor);
+                    retorno=valor;
                 }
             }
-            return "";
+            return retorno;
         }
 
         function comprar(idCaramelo) {

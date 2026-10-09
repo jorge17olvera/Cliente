@@ -1,0 +1,163 @@
+[
+    {
+      "idApunte": 1,
+      "idProfesor": 1,
+      "fechaUltimoCambio": "2025-01-15",
+      "descripcion": "Introducción a los conceptos fundamentales de la asignatura y presentación del temario.",
+      "tipo": "pdf",
+      "nombreArchivo": "introduccion_asignatura.pdf"
+    },
+    {
+      "idApunte": 2,
+      "idProfesor": 1,
+      "fechaUltimoCambio": "2025-01-22",
+      "descripcion": "Resumen de los conceptos básicos tratados durante las primeras sesiones.",
+      "tipo": "word",
+      "nombreArchivo": "conceptos_basicos.docx"
+    },
+    {
+      "idApunte": 3,
+      "idProfesor": 2,
+      "fechaUltimoCambio": "2025-02-03",
+      "descripcion": "Explicación detallada de los fundamentos teóricos necesarios para el curso.",
+      "tipo": "ppt",
+      "nombreArchivo": "fundamentos_teoricos.pptx"
+    },
+    {
+      "idApunte": 4,
+      "idProfesor": 2,
+      "fechaUltimoCambio": "2025-02-10",
+      "descripcion": "Presentación utilizada en clase sobre los principales conceptos y ejemplos prácticos.",
+      "tipo": "ppt",
+      "nombreArchivo": "conceptos_ejemplos.pptx"
+    },
+    {
+      "idApunte": 5,
+      "idProfesor": 3,
+      "fechaUltimoCambio": "2025-02-18",
+      "descripcion": "Vídeo explicativo sobre los procedimientos y técnicas estudiadas en clase.",
+      "tipo": "video",
+      "nombreArchivo": "procedimientos_basicos.mp4"
+    },
+    {
+      "idApunte": 6,
+      "idProfesor": 3,
+      "fechaUltimoCambio": "2025-02-25",
+      "descripcion": "Documento con ejercicios resueltos y explicaciones paso a paso.",
+      "tipo": "pdf",
+      "nombreArchivo": "ejercicios_resueltos.pdf"
+    },
+    {
+      "idApunte": 7,
+      "idProfesor": 4,
+      "fechaUltimoCambio": "2025-03-04",
+      "descripcion": "Material complementario para reforzar los contenidos vistos durante el trimestre.",
+      "tipo": "word",
+      "nombreArchivo": "material_complementario.docx"
+    },
+    {
+      "idApunte": 8,
+      "idProfesor": 4,
+      "fechaUltimoCambio": "2025-03-11",
+      "descripcion": "Presentación sobre los conceptos avanzados y su aplicación en diferentes situaciones.",
+      "tipo": "ppt",
+      "nombreArchivo": "conceptos_avanzados.pptx"
+    },
+    {
+      "idApunte": 9,
+      "idProfesor": 5,
+      "fechaUltimoCambio": "2025-03-19",
+      "descripcion": "Introducción práctica a las herramientas utilizadas durante el desarrollo de la asignatura.",
+      "tipo": "video",
+      "nombreArchivo": "introduccion_practica.mp4"
+    },
+    {
+      "idApunte": 10,
+      "idProfesor": 5,
+      "fechaUltimoCambio": "2025-03-27",
+      "descripcion": "Apuntes completos de la unidad dedicada a las técnicas de resolución de problemas.",
+      "tipo": "pdf",
+      "nombreArchivo": "resolucion_problemas.pdf"
+    },
+    {
+      "idApunte": 11,
+      "idProfesor": 6,
+      "fechaUltimoCambio": "2025-04-02",
+      "descripcion": "Resumen de la unidad con definiciones, ejemplos y ejercicios propuestos.",
+      "tipo": "word",
+      "nombreArchivo": "resumen_unidad.docx"
+    },
+    {
+      "idApunte": 12,
+      "idProfesor": 6,
+      "fechaUltimoCambio": "2025-04-09",
+      "descripcion": "Vídeo de repaso con los contenidos más importantes antes de la evaluación.",
+      "tipo": "video",
+      "nombreArchivo": "video_repaso.mp4"
+    },
+    {
+      "idApunte": 13,
+      "idProfesor": 7,
+      "fechaUltimoCambio": "2025-04-16",
+      "descripcion": "Presentación dedicada al análisis de casos prácticos y ejemplos reales.",
+      "tipo": "ppt",
+      "nombreArchivo": "casos_practicos.pptx"
+    },
+    {
+      "idApunte": 14,
+      "idProfesor": 7,
+      "fechaUltimoCambio": "2025-04-24",
+      "descripcion": "Documento con actividades y ejercicios para realizar de forma individual.",
+      "tipo": "word",
+      "nombreArchivo": "actividades_individuales.docx"
+    },
+    {
+      "idApunte": 15,
+      "idProfesor": 8,
+      "fechaUltimoCambio": "2025-05-02",
+      "descripcion": "Material de estudio correspondiente a la unidad sobre estructuras y organización.",
+      "tipo": "pdf",
+      "nombreArchivo": "estructuras_organizacion.pdf"
+    },
+    {
+      "idApunte": 16,
+      "idProfesor": 8,
+      "fechaUltimoCambio": "2025-05-09",
+      "descripcion": "Vídeo explicativo de los ejercicios realizados durante las últimas sesiones.",
+      "tipo": "video",
+      "nombreArchivo": "ejercicios_explicados.mp4"
+    },
+    {
+      "idApunte": 17,
+      "idProfesor": 1,
+      "fechaUltimoCambio": "2025-05-16",
+      "descripcion": "Repaso general de los contenidos fundamentales de la asignatura.",
+      "tipo": "pdf",
+      "nombreArchivo": "repaso_general.pdf"
+    },
+    {
+      "idApunte": 18,
+      "idProfesor": 3,
+      "fechaUltimoCambio": "2025-05-23",
+      "descripcion": "Presentación final con los contenidos necesarios para preparar la evaluación.",
+      "tipo": "ppt",
+      "nombreArchivo": "preparacion_evaluacion.pptx"
+    },
+    {
+      "idApunte": 19,
+      "idProfesor": 5,
+      "fechaUltimoCambio": "2025-05-30",
+      "descripcion": "Colección de ejercicios adicionales para practicar los conocimientos adquiridos.",
+      "tipo": "word",
+      "nombreArchivo": "ejercicios_adicionales.docx"
+    },
+    {
+      "idApunte": 20,
+      "idProfesor": 8,
+      "fechaUltimoCambio": "2025-06-06",
+      "descripcion": "Resumen final de la asignatura con los conceptos esenciales y recomendaciones de estudio.",
+      "tipo": "pdf",
+      "nombreArchivo": "resumen_final.pdf"
+    }
+  ]
+

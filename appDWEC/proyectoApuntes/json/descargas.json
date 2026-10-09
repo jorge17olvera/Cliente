@@ -1,0 +1,123 @@
+ [
+    {
+      "idDescarga": 1,
+      "idApunte": 1,
+      "idEstudiante": 5,
+      "fecha": "2025-09-10"
+    },
+    {
+      "idDescarga": 2,
+      "idApunte": 2,
+      "idEstudiante": 8,
+      "fecha": "2025-09-11"
+    },
+    {
+      "idDescarga": 3,
+      "idApunte": 3,
+      "idEstudiante": 12,
+      "fecha": "2025-09-12"
+    },
+    {
+      "idDescarga": 4,
+      "idApunte": 4,
+      "idEstudiante": 3,
+      "fecha": "2025-09-15"
+    },
+    {
+      "idDescarga": 5,
+      "idApunte": 5,
+      "idEstudiante": 17,
+      "fecha": "2025-09-16"
+    },
+    {
+      "idDescarga": 6,
+      "idApunte": 6,
+      "idEstudiante": 1,
+      "fecha": "2025-09-17"
+    },
+    {
+      "idDescarga": 7,
+      "idApunte": 7,
+      "idEstudiante": 14,
+      "fecha": "2025-09-18"
+    },
+    {
+      "idDescarga": 8,
+      "idApunte": 8,
+      "idEstudiante": 20,
+      "fecha": "2025-09-19"
+    },
+    {
+      "idDescarga": 9,
+      "idApunte": 9,
+      "idEstudiante": 7,
+      "fecha": "2025-09-22"
+    },
+    {
+      "idDescarga": 10,
+      "idApunte": 10,
+      "idEstudiante": 10,
+      "fecha": "2025-09-23"
+    },
+    {
+      "idDescarga": 11,
+      "idApunte": 11,
+      "idEstudiante": 4,
+      "fecha": "2025-09-24"
+    },
+    {
+      "idDescarga": 12,
+      "idApunte": 12,
+      "idEstudiante": 16,
+      "fecha": "2025-09-25"
+    },
+    {
+      "idDescarga": 13,
+      "idApunte": 13,
+      "idEstudiante": 9,
+      "fecha": "2025-09-26"
+    },
+    {
+      "idDescarga": 14,
+      "idApunte": 14,
+      "idEstudiante": 2,
+      "fecha": "2025-09-29"
+    },
+    {
+      "idDescarga": 15,
+      "idApunte": 15,
+      "idEstudiante": 13,
+      "fecha": "2025-09-30"
+    },
+    {
+      "idDescarga": 16,
+      "idApunte": 16,
+      "idEstudiante": 6,
+      "fecha": "2025-10-01"
+    },
+    {
+      "idDescarga": 17,
+      "idApunte": 17,
+      "idEstudiante": 19,
+      "fecha": "2025-10-02"
+    },
+    {
+      "idDescarga": 18,
+      "idApunte": 18,
+      "idEstudiante": 11,
+      "fecha": "2025-10-03"
+    },
+    {
+      "idDescarga": 19,
+      "idApunte": 19,
+      "idEstudiante": 15,
+      "fecha": "2025-10-04"
+    },
+    {
+      "idDescarga": 20,
+      "idApunte": 20,
+      "idEstudiante": 18,
+      "fecha": "2025-10-06"
+    }
+  ]
+

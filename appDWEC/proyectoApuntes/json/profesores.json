@@ -1,0 +1,91 @@
+[
+    {
+      "idProfesor": 1,
+      "dni": "12345678Z",
+      "codigoAcceso": 4821,
+      "nombre": "Carlos Fernández Martín",
+      "foto": "https://i.pravatar.cc/150?img=51",
+      "likes": 128,
+      "datosBancarios": "000000000000000000000101",
+      "disponibilidad": "Lunes y miércoles de 09:00 a 13:00. Martes y jueves de 16:00 a 19:00.",
+      "fechaAlta": "2024-09-02"
+    },
+    {
+      "idProfesor": 2,
+      "dni": "23456789D",
+      "codigoAcceso": 7352,
+      "nombre": "Laura Sánchez Gómez",
+      "foto": "https://i.pravatar.cc/150?img=47",
+      "likes": 245,
+      "datosBancarios": "000000000000000000000102",
+      "disponibilidad": "Lunes, martes y viernes de 10:00 a 14:00. Miércoles de 16:00 a 20:00.",
+      "fechaAlta": "2024-09-05"
+    },
+    {
+      "idProfesor": 3,
+      "dni": "34567890V",
+      "codigoAcceso": 1946,
+      "nombre": "Miguel Rodríguez López",
+      "foto": "https://i.pravatar.cc/150?img=12",
+      "likes": 317,
+      "datosBancarios": "000000000000000000000103",
+      "disponibilidad": "De lunes a jueves de 08:00 a 12:00. Viernes disponible de 09:00 a 13:00.",
+      "fechaAlta": "2024-09-09"
+    },
+    {
+      "idProfesor": 4,
+      "dni": "45678901H",
+      "codigoAcceso": 6284,
+      "nombre": "Ana Martínez Ruiz",
+      "foto": "https://i.pravatar.cc/150?img=44",
+      "likes": 189,
+      "datosBancarios": "000000000000000000000104",
+      "disponibilidad": "Martes y jueves de 09:00 a 14:00. Lunes y miércoles de 15:00 a 18:00.",
+      "fechaAlta": "2024-09-12"
+    },
+    {
+      "idProfesor": 5,
+      "dni": "56789012L",
+      "codigoAcceso": 3517,
+      "nombre": "Javier Navarro Torres",
+      "foto": "https://i.pravatar.cc/150?img=68",
+      "likes": 412,
+      "datosBancarios": "000000000000000000000105",
+      "disponibilidad": "Lunes, miércoles y viernes de 08:30 a 12:30. Martes disponible de 16:00 a 19:00.",
+      "fechaAlta": "2024-09-16"
+    },
+    {
+      "idProfesor": 6,
+      "dni": "67890123C",
+      "codigoAcceso": 8463,
+      "nombre": "Marta González Pérez",
+      "foto": "https://i.pravatar.cc/150?img=49",
+      "likes": 276,
+      "datosBancarios": "000000000000000000000106",
+      "disponibilidad": "De lunes a viernes de 10:00 a 13:00. También disponible los jueves de 17:00 a 20:00.",
+      "fechaAlta": "2024-09-19"
+    },
+    {
+      "idProfesor": 7,
+      "dni": "78901234M",
+      "codigoAcceso": 2195,
+      "nombre": "David Romero Sánchez",
+      "foto": "https://i.pravatar.cc/150?img=53",
+      "likes": 354,
+      "datosBancarios": "000000000000000000000107",
+      "disponibilidad": "Lunes y jueves de 08:00 a 12:00. Martes y miércoles de 14:00 a 18:00.",
+      "fechaAlta": "2024-09-23"
+    },
+    {
+      "idProfesor": 8,
+      "dni": "89012345X",
+      "codigoAcceso": 5748,
+      "nombre": "Elena Vázquez Moreno",
+      "foto": "https://i.pravatar.cc/150?img=45",
+      "likes": 521,
+      "datosBancarios": "000000000000000000000108",
+      "disponibilidad": "Martes, miércoles y viernes de 09:00 a 13:00. Lunes y jueves de 16:00 a 19:00.",
+      "fechaAlta": "2024-09-26"
+    }
+  ]
+
