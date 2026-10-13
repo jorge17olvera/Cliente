@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Disfraz de Vampiro",
+    "descripcion": "Disfraz de vampiro con capa negra y roja, camisa y colmillos.",
+    "foto": "./fotos/vampiro.jpg",
+    "precio": 29.99
+  },
+  {
+    "id": 2,
+    "nombre": "Disfraz de Bruja",
+    "descripcion": "Vestido negro de bruja con sombrero puntiagudo.",
+    "foto": "./fotos/Bruja.jpg",
+    "precio": 24.99
+  },
+  {
+    "id": 3,
+    "nombre": "Disfraz de Pirata",
+    "descripcion": "Traje de pirata con camisa, pantalones, cinturón y pañuelo.",
+    "foto": "./fotos/Pirata.jpg",
+    "precio": 32.50
+  },
+  {
+    "id": 4,
+    "nombre": "Disfraz de Superhéroe",
+    "descripcion": "Traje de superhéroe con capa y antifaz para combatir el mal.",
+    "foto": "./fotos/Superheroe.jpg",
+    "precio": 34.99
+  },
+  {
+    "id": 5,
+    "nombre": "Disfraz de Esqueleto",
+    "descripcion": "Mono negro con estampado de huesos blancos.",
+    "foto": "./fotos/Esqueleto.jpg",
+    "precio": 19.99
+  },
+  {
+    "id": 6,
+    "nombre": "Disfraz de Zombie",
+    "descripcion": "Ropa desgastada con detalles terroríficos para Halloween.",
+    "foto": "./fotos/Zombie.jpg",
+    "precio": 27.50
+  },
+  {
+    "id": 7,
+    "nombre": "Disfraz de Policía",
+    "descripcion": "Uniforme de policía con gorra, camisa y accesorios.",
+    "foto": "./fotos/Policia.jpg",
+    "precio": 29.50
+  },
+  {
+    "id": 8,
+    "nombre": "Disfraz de Bombero",
+    "descripcion": "Traje rojo de bombero con chaqueta y casco.",
+    "foto": "./fotos/Bombero.jpg",
+    "precio": 31.99
+  },
+  {
+    "id": 9,
+    "nombre": "Disfraz de Dinosaurio",
+    "descripcion": "Mono verde acolchado con capucha de dinosaurio.",
+    "foto": "./fotos/Dinosaurio.jpg",
+    "precio": 39.99
+  },
+  {
+    "id": 10,
+    "nombre": "Disfraz de Payaso",
+    "descripcion": "Traje colorido con volantes, peluca y nariz roja.",
+    "foto": "./fotos/Payaso.jpg",
+    "precio": 22.99
+  },
+  {
+    "id": 11,
+    "nombre": "Disfraz de Princesa",
+    "descripcion": "Vestido elegante de princesa con detalles brillantes.",
+    "foto": "./fotos/Princesa.jpg",
+    "precio": 35.99
+  },
+  {
+    "id": 12,
+    "nombre": "Disfraz de Caballero Medieval",
+    "descripcion": "Túnica medieval con detalles de armadura y cinturón.",
+    "foto": "./fotos/Caballero.jpg",
+    "precio": 37.50
+  },
+  {
+    "id": 13,
+    "nombre": "Disfraz de Astronauta",
+    "descripcion": "Traje espacial blanco con insignias y accesorios.",
+    "foto": "./fotos/Astronauta.jpg",
+    "precio": 33.99
+  },
+  {
+    "id": 14,
+    "nombre": "Disfraz de Abeja",
+    "descripcion": "Mono amarillo y negro con alas y antenas.",
+    "foto": "./fotos/Abeja.jpg",
+    "precio": 21.99
+  },
+  {
+    "id": 15,
+    "nombre": "Disfraz de Gato",
+    "descripcion": "Conjunto negro con orejas, cola y antifaz felino.",
+    "foto": "./fotos/Gato.jpg",
+    "precio": 18.99
+  },
+  {
+    "id": 16,
+    "nombre": "Disfraz de Payasa",
+    "descripcion": "Vestido de payasa con colores vivos y cuello decorativo.",
+    "foto": "./fotos/Payasa.jpg",
+    "precio": 23.50
+  },
+  {
+    "id": 17,
+    "nombre": "Disfraz de Momia",
+    "descripcion": "Traje con vendas blancas para un aspecto de momia antigua.",
+    "foto": "./fotos/Momia.jpg",
+    "precio": 20.99
+  },
+  {
+    "id": 18,
+    "nombre": "Disfraz de Chef",
+    "descripcion": "Chaqueta blanca de cocinero con gorro y pañuelo.",
+    "foto": "./fotos/Chef.jpg",
+    "precio": 26.50
+  },
+  {
+    "id": 19,
+    "nombre": "Disfraz de Unicornio",
+    "descripcion": "Mono pastel con capucha, crin y cuerno de unicornio.",
+    "foto": "./fotos/Unicornio.jpg",
+    "precio": 36.99
+  },
+  {
+    "id": 20,
+    "nombre": "Disfraz de Mago",
+    "descripcion": "Túnica oscura con estrellas, sombrero y varita mágica.",
+    "foto": "./fotos/Mago.jpg",
+    "precio": 28.99
+  }
+]
