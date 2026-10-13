@@ -18,6 +18,8 @@ onload=()=>{
 
     }
 
+    let contador = document.getElementById("contadorCarrito");
+
     contador.addEventListener("click", () => {
         let carrito = [];
         if (sessionStorage.getItem("almacen")) {
@@ -64,7 +66,6 @@ function añadirAlCarrito(disfraz) {
     sessionStorage.setItem("almacen", JSON.stringify(carrito));
     actualizarContadorVisual(carrito);
 
-    mostrarCarrito(carrito);
 
 }
 
@@ -72,13 +73,6 @@ function actualizarContadorVisual(listaCarrito) {
     let contador=document.getElementById("contadorCarrito");
 
     contador.textContent=`CARRITO: ${listaCarrito.length}`;
-
-    lista.forEach(disfraz=>{
-
-    contador.insertAdjacentHTML("beforeend", `<li>
-        ${disfraz}
-        </li>`)
-    })
 }
 
 
@@ -90,7 +84,7 @@ function mostrarCarrito(lista) {
     if (!contenedorLista) {
         contenedorLista = document.createElement("div");
         contenedorLista.id = "listaDesplegable";
-        document.getElementById("contadorCarrito").insertAdjacentElement("afterend", contenedorLista);
+        document.getElementById("contadorCarrito").insertAdjacentElement("beforebegin", contenedorLista);
     }
 
     // 2. Vaciamos el contenedor por si ya tenía cosas de antes (para que no se dupliquen al hacer varios clics)
@@ -103,7 +97,7 @@ function mostrarCarrito(lista) {
     lista.forEach(disfraz => {
         let li = document.createElement("li");
         // OJO: Hay que acceder a las propiedades (ej: disfraz.nombre), si pones solo 'disfraz' saldrá [object Object]
-        li.textContent = `${disfraz.nombre} - ${disfraz.precio}€`; 
+        li.textContent = `${disfraz.nombre} - ${disfraz.precio}€`;
         ul.appendChild(li);
     });
 
