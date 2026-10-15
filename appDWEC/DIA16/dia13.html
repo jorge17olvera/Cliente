@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      tr,td,th,table{
+        border: 2px solid red;
+      }
+    </style>
+    <script src="equipoFutbol.js"></script>
+    <script src="competicionFutbol.js"></script>
+    <script>
+      var competicion = new CompeticionFutbol("La liga", "España");
+      onload = () => {
+        cargarEquipos();
+        document.getElementById("nombreCompeticion").innerText =
+          competicion.nombre;
+        pintarEquiposEnTabla(competicion.equipos);
+        pintarEquiposEnSelect();
+        document.getElementById("botonAnadir")
+                .addEventListener("click",incrementarPunto);
+        document.getElementById("botonAceptar")
+                .addEventListener("click",guardarDatosEquipo);
+        document.getElementById("botonCancelar")
+                .addEventListener("click",ocultarDivEditarEquipo);
+        document.getElementById("botonFiltrar")
+                .addEventListener("click",filtrarEquipos);
+      };
+      function filtrarEquipos(){
+        let filtro=document.getElementById("filtro").value;
+        let listaFiltrada=competicion.filtrarEquipos(filtro);
+        pintarEquiposEnTabla(listaFiltrada);
+      }
+      function incrementarPunto(){
+        //leer el equipo
+        let nombreEquipo = document.getElementById("listaEquipos").value;
+        //buscar el equipo en listaEquipos
+        let posicion=competicion.equipos.findIndex((a)=>a.nombre==nombreEquipo)
+        if (posicion!=-1){
+          competicion.equipos[posicion].puntos++;
+        }
+
+        //pintarTabla con los equipos
+        pintarEquiposEnTabla(competicion.equipos);
+      }
+      function pintarEquiposEnSelect() {
+        let select = document
+          .getElementById("listaEquipos");
+          select.innerHTML="";
+        competicion.equipos.forEach( (equipo)=>{
+          let contenidoHTML = `<option>
+              ${equipo.nombre}
+        </option>`;
+          select.insertAdjacentHTML("beforeend", contenidoHTML);
+        })
+      }
+      function pintarEquiposEnTabla(lista) {
+        let tbody = document
+          .getElementById("tablaEquipos")
+          .getElementsByTagName("tbody")[0];
+          let contador=0;
+        tbody.innerHTML="";
+        lista.sort((a,b)=>b.puntos-a.puntos);
+        lista.forEach( (equipo)=>{
+            contador++;
+          let contenidoHTML = `<tr>
+            <td>${contador}</td>
+                <td>${equipo.puntos}</td>
+                <td>${equipo.nombre}</td>
+                <td>${equipo.ciudad}</td>
+                <td>${equipo.campo}</td>
+                <td>
+                  <a href="javascript:eliminarEquipo('${equipo.nombre}')">Eliminar</a>
+                  <a href="javascript:editarEquipo('${equipo.nombre}')">Editar</a>                  
+                </td> 
+        </tr>`;
+          tbody.insertAdjacentHTML("beforeend", contenidoHTML);
+        })
+      }
+      function eliminarEquipo(nombre){
+        if (competicion.eliminarEquipo(nombre)) {
+          alert("Equipo eliminado");
+          pintarEquiposEnTabla(competicion.equipos);
+          pintarEquiposEnSelect();
+        } else {
+          alert("La operacióon no se ha podido eliminar");
+        }
+      }
+      function editarEquipo(nombre){
+        let equipo=competicion.recuperarDatosEquipo(nombre);
+        if (equipo){
+          document.getElementById("nombre").value=nombre;
+          document.getElementById("ciudad").value=equipo.ciudad;
+          document.getElementById("campo").value=equipo.campo;
+          document.getElementById("nombreEquipo").value=nombre;          
+          document.getElementById("divEditarEquipo").style.display="inline";
+        } else {
+          alert("La operacióon no se ha podido realizar");
+        }
+      }
+      function guardarDatosEquipo(){
+        nombreEquipo= document.getElementById("nombreEquipo").value;
+        nuevoNombre= document.getElementById("nombre").value;
+        nuevaCiudad= document.getElementById("ciudad").value;
+        nuevoCampo= document.getElementById("campo").value;
+        if (competicion.actualizarEquipo(nombreEquipo,nuevoNombre,nuevaCiudad,nuevoCampo)){
+          alert("Datos del equipo actualizados");
+          pintarEquiposEnTabla(competicion.equipos);
+          ocultarDivEditarEquipo();
+        } else {
+          alert("No se han podido guardar los datos");
+        }
+      }
+      function ocultarDivEditarEquipo(){
+        document.getElementById("divEditarEquipo").style.display="none";
+      }
+
+      function cargarEquipos() {
+        for (let i = 1; i <= 10; i++) {
+          let equipo1 = new EquipoFutbol(
+            `Equipo${i}`,
+            `Ciudad${i}`,
+            `Campo${i}`
+          );
+          competicion.anadirEquipo(equipo1);
+        }
+        console.log(competicion);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="nombreCompeticion"></h1>
+    <p>
+      Filtrar: <input type="text" id="filtro">
+      <button type="button" id="botonFiltrar">Filtrar</button>
+    </p>
+    <table id="tablaEquipos">
+      <thead>
+        <tr>
+          <th>Posicion</th>
+          <th>Puntos</th>
+          <th>Nombre</th>
+          <th>Ciudad</th>
+          <th>Campo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    Nombre equipo<select id="listaEquipos"></select>
+    <button type="button" id="botonAnadir">Añadir 1 punto</button>
+    <div id="divEditarEquipo" style="display:none;border:2px solid blue">
+      <p>Nombre:
+      <input type="hidden" id="nombreEquipo">
+      <input type="text" id="nombre"></p>
+      <p>Ciudad:<input type="text" id="ciudad"></p>
+      <p>Campo:<input type="text" id="campo"></p>
+      <p>
+        <button type="button" id="botonAceptar">Guardar</button>
+        <button type="button" id="botonCancelar">Cancelar</button>
+      </p>
+    </div>
+  </body>
+</html>

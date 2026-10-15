@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Libro.js"></script>
+    <script src="LibroElectronico.js"></script>
+    <script src="Libreria.js"></script>
+    <script>
+        let libro1=new Libro("1", "Libro1", 1, "Anaya");
+        console.log(libro1);
+        let LibroElectronico1=new LibroElectronico("2", "Libro2", 33, "SM", "Amazon")
+        console.log(LibroElectronico1)
+
+        let libreria=new Libreria("Libreria Canaveral", "Av Onu");
+    </script>
+
+    <script src="libreria.js"></script>
+</head>
+<body>
+    <div id="central">
+        <table id="tablaLibros">
+            <thead>
+                <tr>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Editorial</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+        <p><label for="txtidLibro">ISBN</label><input type="text" name="" id="txtidLibro"></p>
+        <p><label for="txtNombre">Nombre</label><input type="text" name="" id="txtNombre"></p>
+        <p><label for="txtAutor">ID Autor</label><input type="text" name="" id="txtAutor"></p>
+        <p><label for="txtEditorial">Editorial</label><input type="text" name="" id="txtEditorial"></p>
+        
+        <button type="button" id="anadir">Añadir Libro</button>
+    </div>
+</body>
+</html>
