@@ -1,10 +1,13 @@
-const { createElement } = require("react");
+
 
 let listaEstudiantes=[];
-pedirDatosJSONAlServidorYEjecutar(listaUsuarios, "./fotos/json/estudiantes.json", mostrarTotalAlumnos);
+pedirDatosJSONAlServidorYEjecutar(listaEstudiantes, "./json/estudiantes.json", mostrarTotalAlumnos);
 
 let listaProfesores=[];
-pedirDatosJSONAlServidorYEjecutar(listaProfesores, "./fotos/json/estudiantes.json", mostrarTotalProfesores);
+pedirDatosJSONAlServidorYEjecutar(listaProfesores, "./json/profesores.json", mostrarTotalProfesores);
+
+let listaApuntes=[];
+pedirDatosJSONAlServidorYEjecutar(listaApuntes, "./json/apuntes.json", mostrarTotalProfesoresConApuntes);
 
 onload=()=>{
  
@@ -26,7 +29,50 @@ function mostrarTotalProfesores(lista) {
 
 }
 
+function mostrarTotalProfesoresConApuntes(lista) {
+    let divTotalProfesores=document.getElementById("totalProfesores");
+    let listaProfesoresConApuntes=[];
+    lista.forEach(apunte=>{
+        let idProfe=apunte.idProfesor;
+        if (!listaProfesoresConApuntes.includes(idProfe)) {
+            listaProfesoresConApuntes.push(idProfe)
+        }
+    })
+    let parrafo=document.createElement("p");
+    parrafo.insertAdjacentText("afterbegin", `Numero profesores que han subido apuntes: ${listaProfesoresConApuntes.length}`);
+    divTotalProfesores.insertAdjacentElement("afterbegin", parrafo);
+}
 
+
+function mostrarDivGestionEstudiantes() {
+    [...document.getElementsByClassName("visible")].forEach(elemento=>elemento.className="oculto");
+    document.getElementById("gestionEstudiantes").className="visible";
+    
+}
+
+
+
+function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+/*
 
 function recuperarCookie(nombreCookiePedida) {
             let listaCookies = document.cookie.split(";");
@@ -61,4 +107,4 @@ function recuperarCookie(nombreCookiePedida) {
             
             alert("Caramelo comprado y añadido al carrito");
             actualizarContadorVisual();
-        }
+        }*/

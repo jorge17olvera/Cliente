@@ -113,7 +113,7 @@
     },
     {
       "idApunte": 15,
-      "idProfesor": 8,
+      "idProfesor": 1,
       "fechaUltimoCambio": "2025-05-02",
       "descripcion": "Material de estudio correspondiente a la unidad sobre estructuras y organización.",
       "tipo": "pdf",
@@ -121,7 +121,7 @@
     },
     {
       "idApunte": 16,
-      "idProfesor": 8,
+      "idProfesor": 1,
       "fechaUltimoCambio": "2025-05-09",
       "descripcion": "Vídeo explicativo de los ejercicios realizados durante las últimas sesiones.",
       "tipo": "video",
@@ -153,7 +153,7 @@
     },
     {
       "idApunte": 20,
-      "idProfesor": 8,
+      "idProfesor": 1,
       "fechaUltimoCambio": "2025-06-06",
       "descripcion": "Resumen final de la asignatura con los conceptos esenciales y recomendaciones de estudio.",
       "tipo": "pdf",
