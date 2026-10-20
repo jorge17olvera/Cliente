@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="moduloSaludo.js" type="module"></script>
+    <script>
+        function cambiarSaludo() {
+            document.getElementsByTagName("app-saludo")[0].setAttribute("texto", "XXX");
+        }
+    </script>
+</head>
+<body>
+    <app-saludo texto="Hola">
+        2 DAW
+    </app-saludo>
+    <app-saludo texto="Adios"></app-saludo>
+
+    <button type="button" onclick="cambiarSaludo()">Cambiar Saludo</button>
+</body>
+</html>

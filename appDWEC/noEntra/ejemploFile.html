@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Leer archivo</title>
+</head>
+<body>
+
+    <input type="file" id="archivo" accept=".txt">
+    <br><br>
+
+    <textarea id="contenido" rows="15" cols="80"></textarea>
+
+    <script>
+        const inputArchivo = document.getElementById("archivo");
+        const textarea = document.getElementById("contenido");
+
+        inputArchivo.addEventListener("change", () => {
+            const archivo = inputArchivo.files[0];
+
+            if (!archivo) {
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                textarea.value = reader.result;
+            };
+
+            reader.onerror = () => {
+                alert("Error al leer el archivo");
+            };
+
+            reader.readAsText(archivo);
+            
+        });
+    </script>
+
+    <br><br>
+<input type="file" id="archivo2" accept="image/*">
+
+<img id="preview" width="300">
+
+<script>
+    const input = document.getElementById("archivo2");
+    const preview = document.getElementById("preview");
+
+    input.addEventListener("change", () => {
+
+        const file = input.files[0];
+
+        if (!file) return;
+
+        const url = URL.createObjectURL(file);
+
+        preview.src = url;
+    });
+
+    const datos = "nombre,edad\nAna,25\nLuis,32";
+
+    const blob = new Blob([datos], {
+        type: "text/csv"
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const enlace = document.createElement("a");
+    enlace.href = url;
+    enlace.download = "personas.csv";
+    enlace.click();
+    document.body.appendChild(enlace);
+    URL.revokeObjectURL(url);
+</script>
+
+</body>
+</html>

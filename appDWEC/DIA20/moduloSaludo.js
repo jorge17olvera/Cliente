@@ -1,0 +1,1 @@
+import { etiquetaSaludo } from "./saludo.js";
