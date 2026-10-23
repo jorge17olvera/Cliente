@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr, td{
+            border: solid red;
+        } 
+    </style>
+    <script>
+        var lista2=[
+            {"id":1, "nombre":"Jorge", "edad":20},
+            {"id":2, "nombre":"Pepe", "edad":27},
+            {"id":3, "nombre":"Luis", "edad":10},
+            {"id":4, "nombre":"Paco", "edad":30},
+            {"id":5, "nombre":"Pedro", "edad":23},
+        ]
+        var listaColumnas=["nombre", "edad", "id"];
+        onload=()=>{
+            pintarTabla(lista2);
+            document.getElementById("filtro").addEventListener("keyup", filtrarTabla)
+        }
+        function filtrarTabla() {
+            let filtro=document.getElementById("filtro").value;
+            let listaFiltrada=lista2.filter(element=>element.nombre.includes(filtro));
+            pintarTabla(listaFiltrada);
+        }
+
+        function pintarTabla(lista) {
+            let tbody=document.getElementById("tabla");
+            tbody.innerHTML="";
+            lista.forEach(element => {
+                let tr=document.createElement("tr");
+                tbody.appendChild(tr);
+                listaColumnas.forEach(columna=>{
+                    let td=document.createElement("td");
+                    tr.appendChild(td);
+                    td.textContent=element[columna];
+                })
+            });
+        }
+    </script>
+</head>
+<body>
+    <label for="filtro">Filtro: </label><input type="text" id="filtro">
+    <table>
+        <tbody id="tabla"></tbody>
+    </table>
+</body>
+</html>

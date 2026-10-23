@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja{
+            position: relative;
+            left: 0px;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        #foto{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        let intervalo;
+        let intervaloDiv;
+        let contador=0;
+
+
+        let intervaloFoto;
+        let contadorFoto=0;
+        let listaImagenes=["Abeja.jpg" , "Astronauta.jpg", "Bombero.jpg"];
+        onload=()=>{
+            intervalo=setInterval(() => {
+                let contador=parseInt(document.getElementById("contador").value)+1
+                document.getElementById("contador").value=contador;
+                if (contador==20) {
+                    clearInterval(intervalo);
+                }
+            }, 1000);
+
+            intervaloDiv=setInterval(() => {
+                contador++
+                document.getElementById("caja").style.left=contador + "px";
+            }, 500);
+
+
+            intervaloFoto=setInterval(() => {
+                document.getElementById("foto").setAttribute("src", listaImagenes[contadorFoto]);
+                contadorFoto++;
+                if (contadorFoto==listaImagenes.length) {
+                 contadorFoto=0;   
+                }
+            }, 1000);
+        }
+
+        
+        
+    </script>
+</head>
+<body>
+    <input id="contador" value="0">
+    <div id="caja"></div>
+    <img src="" alt="" id="foto">
+</body>
+</html>

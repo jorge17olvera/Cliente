@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejTabla.js" type="module"></script>
+</head>
+<body>
+    <app-tabla datos='[{"id":1, "nombre":"Jorge"},
+                       {"id":2, "nombre":"Pepe"}]'>
+    </app-tabla>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+    <app-select colores="red;blue"></app-select>
+</body>
+</html>
