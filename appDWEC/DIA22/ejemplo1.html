@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        onload=()=>{
+            mensaje="capa1";
+            document.getElementById("capa1").addEventListener("click", ()=>f1(mensaje));
+            document.getElementById("parrafo1").addEventListener("click", ()=>f1(mensaje));
+            document.getElementById("boton1").addEventListener("click", ()=>f1("boton1"));
+            document.getElementById("boton2").addEventListener("click", ()=>f1("boton2"));
+            document.getElementById("caja1").addEventListener("keydown", ()=>f1("caja1"));
+        }
+
+        function f1(mensaje){
+            alert(mensaje)
+        }
+
+        function f3(evento) {
+            alert("soy parrafo")
+        }
+
+        function f2(evento) {
+            if (evento.key=="a") {
+                evento.preventDefault();
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="capa1">
+        <input type="text" id="caja1">
+        <p id="parrafo1">Parrafo 1</p>
+        <button type="button" id="boton1">Pulsame1</button>
+        <button id="boton2">Pulsame2</button>
+    </div>
+</body>
+</html>
