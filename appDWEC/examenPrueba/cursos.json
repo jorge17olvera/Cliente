@@ -1,0 +1,139 @@
+
+[
+  {
+    "curso_id": 1,
+    "curso_descripcion": "Salsa",
+    "curso_horario": "TURNO A",
+    "curso_dia": "Lunes",
+    "curso_aula": "A-23",
+    "curso_cod_entrenador": 1,
+    "curso_imagen": "salsa.jpg",
+    "curso_precio": 12.5
+  },
+  {
+    "curso_id": 2,
+    "curso_descripcion": "Salsa",
+    "curso_horario": "TURNO A",
+    "curso_dia": "Martes",
+    "curso_aula": "A-3",
+    "curso_cod_entrenador": 1,
+    "curso_imagen": "salsa.jpg",
+    "curso_precio": 32.5
+  },
+  {
+    "curso_id": 3,
+    "curso_descripcion": "Salsa",
+    "curso_horario": "TURNO B",
+    "curso_dia": "Jueves",
+    "curso_aula": "A-67",
+    "curso_cod_entrenador": 2,
+    "curso_imagen": "salsa.jpg",
+    "curso_precio": 22.5
+  },
+  {
+    "curso_id": 4,
+    "curso_descripcion": "Salsa",
+    "curso_horario": "TURNO C",
+    "curso_dia": "Viernes",
+    "curso_aula": "A-32",
+    "curso_cod_entrenador": 1,
+    "curso_imagen": "salsa.jpg",
+    "curso_precio": 10.5
+  },
+  {
+    "curso_id": 5,
+    "curso_descripcion": "Salsa",
+    "curso_horario": "TURNO C",
+    "curso_dia": "Miercoles",
+    "curso_aula": "A-23",
+    "curso_cod_entrenador": 3,
+    "curso_imagen": "salsa.jpg",
+    "curso_precio": 11.5
+  },
+  {
+    "curso_id": 11,
+    "curso_descripcion": "Rumba",
+    "curso_horario": "TURNO B",
+    "curso_dia": "Lunes",
+    "curso_aula": "A-23",
+    "curso_cod_entrenador": 1,
+    "curso_imagen": "rumba.jpg",
+    "curso_precio": 12.5
+  },
+  {
+    "curso_id": 12,
+    "curso_descripcion": "Rumba ",
+    "curso_horario": "TURNO B",
+    "curso_dia": "Martes",
+    "curso_aula": "A-3",
+    "curso_cod_entrenador": 1,
+    "curso_imagen": "rumba.jpg",
+    "curso_precio": 32.5
+  },
+  {
+    "curso_id": 13,
+    "curso_descripcion": "Rumba ",
+    "curso_horario": "TURNO A",
+    "curso_dia": "Jueves",
+    "curso_aula": "A-67",
+    "curso_cod_entrenador": 2,
+    "curso_imagen": "rumba.jpg",
+    "curso_precio": 22.5
+  },
+  {
+    "curso_id": 21,
+    "curso_descripcion": "Tango",
+    "curso_horario": "TURNO C",
+    "curso_dia": "Lunes",
+    "curso_aula": "A-23",
+    "curso_cod_entrenador": 1,
+    "curso_entrenador": "Pedro Picapiedra",
+    "curso_imagen": "tango.jpg",
+    "curso_precio": 12.5
+  },
+  {
+    "curso_id": 22,
+    "curso_descripcion": "Tango",
+    "curso_horario": "TURNO C",
+    "curso_dia": "Martes",
+    "curso_aula": "A-3",
+    "curso_cod_entrenador": 1,
+    "curso_entrenador": "Pedro Picapiedra",
+    "curso_imagen": "tango.jpg",
+    "curso_precio": 32.5
+  },
+  {
+    "curso_id": 23,
+    "curso_descripcion": "Tango",
+    "curso_horario": "TURNO C",
+    "curso_dia": "Jueves",
+    "curso_aula": "A-67",
+    "curso_cod_entrenador": 2,
+    "curso_entrenador": "Jose Ramon",
+    "curso_imagen": "tango.jpg",
+    "curso_precio": 22.5
+  },
+  {
+    "curso_id": 24,
+    "curso_descripcion": "Tango",
+    "curso_horario": "TURNO A",
+    "curso_dia": "Viernes",
+    "curso_aula": "A-32",
+    "curso_cod_entrenador": 1,
+    "curso_entrenador": "Pedro Picapiedra",
+    "curso_imagen": "tango.jpg",
+    "curso_precio": 10.5
+  },
+  {
+    "curso_id": 25,
+    "curso_descripcion": "Tango",
+    "curso_horario": "TURNO A",
+    "curso_dia": "Miercoles",
+    "curso_aula": "A-23",
+    "curso_cod_entrenador": 3,
+    "curso_entrenador": "Angel Garo",
+    "curso_imagen": "tango.jpg",
+    "curso_precio": 11.5
+  }
+]
+
