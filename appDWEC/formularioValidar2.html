@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        onload=()=>{
+            document.getElementsByTagName("button")[0].addEventListener("click", validar)
+            document.getElementsByTagName("button")[1].addEventListener("click", validar2)
+            
+        }
+
+        function eliminarMensajeError() {
+            [...document.getElementsByClassName("error")].forEach(elemento=>elemento.remove());
+        }
+
+        function validar(evento) {
+            let error=false;
+
+            let nombre=document.getElementById("nombre");
+            let numero=document.getElementById("numero");
+            let fechaNacimiento=document.getElementById("fechaNacimiento");
+            let patronFecha=/^\d{2}-\d{2}-\d{4}$/;
+
+            let checkboxDescuento=document.getElementsByName("descuento");
+
+
+            eliminarMensajeError();
+
+            let contador=0;
+            [...checkboxDescuento].forEach(elemento=>{
+                if (elemento.checked) {
+                    contador++;
+                }
+            })
+
+            if (contador!=1) {
+                checkboxDescuento[0].parentNode.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+            if (!patronFecha.test(fechaNacimiento.value)||noEsFechaValida(fechaNacimiento.value)|| noEsMayorEdad(fechaNacimiento.value)) {
+                fechaNacimiento.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+            if (isNaN(numero.value) || parseInt(numero.value)<1 || parseInt(numero.value)>9) {
+                numero.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+
+            }
+
+            if (nombre.value.trim()=="") {
+                nombre.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+
+            if (error) {
+                evento.preventDefault();
+            }
+        }
+
+        function validar2() {
+            let error=false;
+
+            let nombre=document.getElementById("nombre");
+            let numero=document.getElementById("numero");
+            let fechaNacimiento=document.getElementById("fechaNacimiento");
+            let patronFecha=/^\d{2}-\d{2}-\d{4}$/;
+
+            let checkboxDescuento=document.getElementsByName("descuento");
+
+
+            eliminarMensajeError();
+
+            let contador=0;
+            [...checkboxDescuento].forEach(elemento=>{
+                if (elemento.checked) {
+                    contador++;
+                }
+            })
+
+            if (contador!=1) {
+                checkboxDescuento[0].parentNode.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+            if (!patronFecha.test(fechaNacimiento.value)||noEsFechaValida(fechaNacimiento.value)|| noEsMayorEdad(fechaNacimiento.value)) {
+                fechaNacimiento.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+            if (isNaN(numero.value) || parseInt(numero.value)<1 || parseInt(numero.value)>9) {
+                numero.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+
+            }
+
+            if (nombre.value.trim()=="") {
+                nombre.insertAdjacentHTML("afterend", "<span class='error'>ERROR</span>");
+                error=true;
+            }
+
+
+            if (!error) {
+                document.forms[0].submit();
+            }
+        }
+
+        function noEsFechaValida(textoFecha) {
+            var dia = textoFecha.split("-")[0];
+            var mes = textoFecha.split("-")[1];
+            var year = textoFecha.split("-")[2];
+            var fecha = new Date(year, mes - 1, dia);
+            if (fecha.getFullYear() != year ||
+                fecha.getMonth() != mes - 1 ||
+                fecha.getDate() != dia) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function noEsMayorEdad(textoFecha) {
+            var dia = textoFecha.split("-")[0];
+            var mes = textoFecha.split("-")[1];
+            var year = textoFecha.split("-")[2];
+            var fecha = new Date(year, mes - 1, dia);
+            var hoy=new Date();
+            hoy.setFullYear(hoy.getFullYear()-18);
+            /*if (fecha>hoy) {
+                return true;
+            }else{
+                return false;
+            }*/
+           return (fecha>hoy);
+        }
+    </script>
+</head>
+<body>
+    <form action="novale.php" method="get">
+        <label for="nombre">Nombre</label><input type="text" id="nombre"><br>
+        <label for="numero">Numero entre 1 y 9</label><input type="text" id="numero"><br>
+        <label for="fechaNacimiento">Fecha Nacimiento:</label><input type="text" id="fechaNacimiento"><br>
+
+        <div>
+        <span>Descuentos</span>
+        familia numerosa <input type="checkbox" name="descuentos" value="1">
+        deportista de elite <input type="checkbox" name="descuentos" value="2">
+        militar <input type="checkbox" name="descuentos" value="3">
+        funcionario <input type="checkbox" name="descuentos" value="4">
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="button">Tipo Button</button>
+    </form>
+</body>
+</html>
