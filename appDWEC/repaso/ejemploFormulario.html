@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        onload=()=>{
+            document.getElementsByTagName("button")[0].addEventListener("click", validar)
+        }
+
+        function validar(evento) {
+            /*let nombre=document.getElementById("nombre").value.trim();
+            
+            if (nombre.length<8) {
+                evento.preventDefault();
+                alert("Nombre demasiado corto, min 8dig");
+            }else{
+                alert(nombre);
+            }*/
+
+
+            ocultarErrores();
+            let cajaNombre=document.getElementById("nombre");
+            let errores=false;
+
+            if (cajaNombre.value.trim().length<8) {
+                ocultarErrores();
+                cajaNombre.insertAdjacentHTML("afterend", "<span class='error'>Error</span>");
+                errores=true;
+            }
+
+            let cajaCodigo=document.getElementById("codigo");
+            let patronCodigo=/^[A-Z]+[0-9]{5,}[a-z]+$/;
+            if (!patronCodigo.test(cajaCodigo.value)) {
+                cajaCodigo.insertAdjacentHTML("afterend", "<span class='error'>Error</span>");
+                errores=true;
+            }
+
+            let cajaDescripcion=document.getElementById("descripcion");
+            if (!cajaDescripcion.match("dolor") && !cajaDescripcion.match("fiebre")) {
+                cajaCodigo.insertAdjacentHTML("afterend", "<span class='error'>Error</span>");
+                errores=true;
+                
+            }
+
+            let cajaFecha=document.getElementById("fecha");
+            let patronFecha=/^\d{2}-\d{2}-\d{4}$/;
+            if (!patronFecha.test(cajaFecha.value)|| !esFechaValida(cajaFecha.value)|| !esFechaMesSiguiente(cajaFecha.value)) {
+                cajaFecha.insertAdjacentHTML("afterend", "<span class='error'>Error</span>");
+                errores=true;
+            }
+
+            
+
+            if (errores) {
+                evento.preventDefault();
+            }
+        }
+
+        function esFechaValida(textoFecha) {
+            let fecha=new Date(dia,mes-1,year);
+            let dia=textoFecha.split("-")[0];
+            let mes=textoFecha.split("-")[1];
+            let year=textoFecha.split("-")[2];
+
+            if (dia==fecha.getDate() && mes==fecha.getMonth&& year==fecha.getFullYear) {
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function esFechaMesSiguiente(textoFecha) {
+            let hoy=new Date();
+            hoy.setMonth(hoy.getMonth+1);
+            let fecha=new Date(dia,mes-1,year);
+            let dia=textoFecha.split("-")[0];
+            let mes=textoFecha.split("-")[1];
+            let year=textoFecha.split("-")[2];
+
+
+            if (fecha.getFullYear==hoy.getFullYear && fecha.getMonth==hoy.getMonth) {
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function ocultarErrores() {
+            [...document.getElementsByClassName("error")].forEach(element =>element.remove);
+        }
+    </script>
+</head>
+<body>
+    <form action="https://validar" method="post">
+        <span>Nombre: </span><input type="text" id="nombre" name="nombre"><br><br>
+
+        <span>Codigo: </span><input type="text" name="codigo" id="codigo"><br><br>
+
+        <span>Descripcion: </span> <textarea type="text" name="descripcion" id="descripcion"></textarea><br><br>
+
+        <span>Fecha: </span><input type="text" name="fecha" id="fecha"><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
