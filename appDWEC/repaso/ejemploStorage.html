@@ -1,29 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        onload = () => {
+            document.getElementById("guardar").addEventListener("click", guardarCita);
+            document.getElementById("editar").addEventListener("click", editarCita);
+            document.getElementById("borrar").addEventListener("click", borrarCita);
+        }
+
+        function guardarCita() {
+            //recuperar datos de la cita
+            let nombre = document.getElementById("nombre").value.trim();
+            let descripcion = document.getElementById("descripcion").value.trim();
+            let dia = document.getElementById("dia").value.trim();
+            let hora = document.getElementById("hora").value.trim();
+
+            //recuperar las citas guardadas
+            let listaCitas = [];
+            if (sessionStorage.getItem("citas")) {
+                listaCitas = JSON.parse(sessionStorage.getItem("citas"));
+            }
+
+            //si ya existe mostrar error
+            let citaBuscada = listaCitas.find(cita => cita.nombre == nombre && cita.descripcion == descripcion && cita.dia == dia && cita.hora == hora);
+
+            if (citaBuscada) {
+                alert("Ya existe esta cita");
+            } else {
+                //si no existe guardar la cita
+                listaCitas.push({
+                    "nombre": nombre,
+                    "descripcion": descripcion,
+                    "dia": dia,
+                    "hora": hora
+                })
+                alert("Cita guardada correctamente");
+                sessionStorage.setItem("citas", JSON.stringify(listaCitas));
+            }
+        }
+
+        function borrarCita() {
+            //recuperar datos de la cita
+            let nombre = document.getElementById("nombre").value.trim();
+            let descripcion = document.getElementById("descripcion").value.trim();
+            let dia = document.getElementById("dia").value.trim();
+            let hora = document.getElementById("hora").value.trim();
+
+            //recuperar las citas guardadas
+            let listaCitas = [];
+            if (sessionStorage.getItem("citas")) {
+                listaCitas = JSON.parse(sessionStorage.getItem("citas"));
+            }
+
+            // si existe la borro
+            let posicionBuscada = listaCitas.findIndex(cita => cita.nombre == nombre && cita.dia == dia && cita.hora == hora);
+            if (posicionBuscada!=-1) {
+                listaCitas.splice(posicionBuscada, 1)
+                sessionStorage.setItem("citas", JSON.stringify(listaCitas));
+            }else{
+            //si no existe error
+                alert("esta cita no existe")
+            }
+            
+        }
+
+        function editarCita() {
+            //recuperar datos de la cita
+            let nombre = document.getElementById("nombre").value.trim();
+            let descripcion = document.getElementById("descripcion").value.trim();
+            let dia = document.getElementById("dia").value.trim();
+            let hora = document.getElementById("hora").value.trim();
+
+            //recuperar las citas guardadas
+            let listaCitas = [];
+            if (sessionStorage.getItem("citas")) {
+                listaCitas = JSON.parse(sessionStorage.getItem("citas"));
+            }
+
+            //si la cita existe se cambia la descripcion
+            let posicionBuscada = listaCitas.findIndex(cita => cita.nombre == nombre && cita.dia == dia && cita.hora == hora);
+            if (posicionBuscada!=-1) {
+                listaCitas[posicionBuscada].descripcion=descripcion;
+                alert("Cita actualizada correctamente");
+            }else{
+            //si la cita no existe se muestra error
+                alert("Esta cita no existe");
+            }
+        }
+    </script>
 </head>
+
 <body>
     <form action="">
         <span>Nombre Paciente: </span><input type="text" name="nombre" id="nombre"><br>
+        <span>Descripcion: </span><textarea id="descripcion"></textarea><br>
         <span>Dia</span><select name="dia" id="dia">
             <option value="0">Elige un dia</option>
             <option>Lunes</option>
             <option>Viernes</option>
-            
+
         </select><br>
 
         <span>Hora: </span><select name="hora" id="hora">
             <option value="0">Elige una hora</option>
-            <option >8</option>
-            <option >20</option>
+            <option>8</option>
+            <option>20</option>
         </select><br>
 
         <button type="button" id="guardar">Guardar</button>
         <button type="button" id="editar">Editar</button>
         <button type="button" id="borrar">Borrar</button>
     </form>
+        <a href="ejemploStorageVer.html">Ver citas</a>
+
 </body>
+
 </html>
